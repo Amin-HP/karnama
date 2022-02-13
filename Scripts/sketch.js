@@ -23,10 +23,11 @@ function preload(){
 
 }
 function setup() {
+  getAudioContext().suspend();
   imageRatio = images[3].width / images[3].height;
 
   cnv = createCanvas(windowWidth, windowHeight, WEBGL);
-  cnv.mouseClicked(createImage);
+  // cnv.mouseClicked(createImage);
   //sound and fft Setup
   fft = new p5.FFT();
   fft.setInput(soundFile);
@@ -174,6 +175,12 @@ const createImage = () => {
     soundFile.loop();
   }
   // triggerImage();
+}
+function mousePressed() {
+  userStartAudio();
+  if(!soundFile.isPlaying()){
+    soundFile.loop();
+  }
 }
 
 const addImage = (index, dur, x, y, size, xDomain, yDomain) => {
