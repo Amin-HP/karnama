@@ -32,7 +32,7 @@ function setup() {
   fft.setInput(soundFile);
   spectrum = fft.analyze(fftSize);
   soundFile.amp(0.8);
-  soundFile.loop();
+  // soundFile.loop();
   frameRate(120);
 
 }
@@ -40,7 +40,7 @@ function setup() {
 function draw() {
   // clear()
   if(soundFile.isLoaded() && !soundFile.isPlaying()){
-    soundFile.play();
+    soundFile.loop();
   }
 
   soundAnalysis();
@@ -116,6 +116,10 @@ const atackNote = (index) => {
   // console.log(index , " -> kick");
   if(index == 0){
     isBlack = !isBlack;
+    // isBlack = true
+    // setInterval(()=>{
+    //   isBlack=false;
+    // }, 300)
   }
   if(index == 1){
     triggerImage();
@@ -166,6 +170,9 @@ const createImage = () => {
   // } else {
   //   soundFile.loop();
   // }
+  if(soundFile.isLoaded() && !soundFile.isPlaying()){
+    soundFile.play();
+  }
   triggerImage();
 }
 

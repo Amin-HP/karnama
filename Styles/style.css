@@ -3,5 +3,6 @@ body, html {
   background-color: black;
   font-family: Raleway;
   font-size: 1em;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
