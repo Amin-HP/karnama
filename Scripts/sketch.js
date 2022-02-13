@@ -39,9 +39,9 @@ function setup() {
  // 3 - 8
 function draw() {
   // clear()
-  if(soundFile.isLoaded() && !soundFile.isPlaying()){
-    soundFile.loop();
-  }
+  // if(soundFile.isLoaded() && !soundFile.isPlaying()){
+  //   soundFile.loop();
+  // }
 
   soundAnalysis();
   rectMode(CENTER)
@@ -170,10 +170,10 @@ const createImage = () => {
   // } else {
   //   soundFile.loop();
   // }
-  if(soundFile.isLoaded() && !soundFile.isPlaying()){
-    soundFile.play();
+  if(!soundFile.isPlaying()){
+    soundFile.loop();
   }
-  triggerImage();
+  // triggerImage();
 }
 
 const addImage = (index, dur, x, y, size, xDomain, yDomain) => {
