@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="./Scripts/AsciiEffect.js"></script>
+  <!-- <script src="https://cdn.skypack.dev/@three-ts/orbit-controls" ></script> -->
+  <link rel="stylesheet" href="https://fontlibrary.org//face/freefarsi-monospace">
+  <style>
+    @font-face {
+      font-family: Vazir Code;
+      src: url('fonts/Vazir-Code.eot');
+      src: url('fonts/Vazir-Code.eot?#iefix') format('embedded-opentype'),
+          url('fonts/Vazir-Code.woff') format('woff'),
+          url('fonts/Vazir-Code.ttf') format('truetype');
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: Vazir Code Hack;
+      src: url('fonts/Vazir-Code-Hack.eot');
+      src: url('fonts/Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'),
+          url('fonts/Vazir-Code-Hack.woff') format('woff'),
+          url('fonts/Vazir-Code-Hack.ttf') format('truetype');
+      font-weight: normal;
+    }
+
+  
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      /* font-family: "FreeFarsiMonospaceMono"; */
+      font-family: 'Vazir Code', 'Vazir Code Hack', monospaced;
+      font-weight: bold;
+      font-style: normal;
+      background-color: #f0f0f0;
+      margin: 0px;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: white;
+    }
+
+    a:hover {
+      color: purple;
+    }
+
+    #scene-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="scene-container"></div>
+
+  <script src="./Scripts/threeCode.js"></script>
+
+</body>
+
+</html>

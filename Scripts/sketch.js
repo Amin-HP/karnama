@@ -22,6 +22,7 @@ function preload(){
   logo[1] = loadImage(`Assets/logo2.png`);
 
 }
+
 function setup() {
   getAudioContext().suspend();
   imageRatio = images[3].width / images[3].height;
