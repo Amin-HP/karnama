@@ -76,7 +76,7 @@
     // scene.add(mesh);
 
     const loader = new THREE.GLTFLoader();
-    loader.load( 'Assets/source/fox.glb', function ( gltf ) {
+    loader.load( 'Assets/fox/source/fox.glb', function ( gltf ) {
         model = gltf.scene;
         mesh = gltf.scene.children[0];
         mesh.scale.z =  0.05;
